@@ -1,0 +1,3 @@
+[linux]
+zainnodea ansible_host=34.227.229.111 ansible_user=root ansible_ssh_pass=Dreamworld95!
+zainnodeb ansible_host=18.215.179.14 ansible_user=root ansible_ssh_pass=Dreamworld95!
