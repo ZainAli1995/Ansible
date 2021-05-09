@@ -1,0 +1,18 @@
+-
+ name: "Create a new file called /tmp/resolv.tmp"
+ hosts: linux
+ tasks:
+  -
+   name: "Create a new file called /tmp/resolv.tmp"
+   command: "touch /tmp/resolv.tmp"
+
+- 
+ name: "Add new entry to /tmp/resolv.tmp"
+ hosts: linux
+ tasks:
+  -
+   name: "Add 10.1.250.10 to the file above"
+   lineinfile:
+       path: /tmp/resolv.tmp
+       line: 'nameserver 10.1.250.10'
+
