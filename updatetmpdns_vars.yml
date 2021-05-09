@@ -1,0 +1,12 @@
+-
+ name: "Update the name server entry in the /tmp/resolv.tmp file"
+ hosts: linux
+ vars:
+   nameserver_ip: 10.1.250.10
+ tasks:
+   -
+     name: "Update nameserver entry in the /tmp/resolv.tmp file"
+     lineinfile:
+        path: /tmp/resolv.tmp
+        line: 'name {{ nameserver_ip }}'
+
