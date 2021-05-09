@@ -1,7 +1,0 @@
--
- name: "Set date time on the servers to America/Toronto"
- hosts: linux
- tasks:
-  -
-   name: "Set the time zone to America/Toronto on the servers"
-   command: "timedatectl set-timezone America/Toronto"
