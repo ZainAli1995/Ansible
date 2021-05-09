@@ -1,0 +1,8 @@
+-
+ name: "Install the telnet utility on the nodes"
+ hosts: linux
+ tasks:
+   -
+    name: "Install telnet utility"
+    yum: "name=telnet state=latest"
+
