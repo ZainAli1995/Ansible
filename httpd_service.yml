@@ -1,0 +1,7 @@
+-
+ name: "Start the httpd service using the service module on the nodes"
+ hosts: zainnodea,zainnodeb
+ tasks:
+  - name: "Start the httpd service"
+    service: "name=httpd state=started"
+
