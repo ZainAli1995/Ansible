@@ -4,3 +4,4 @@
  tasks:
   - name: 'Execute a script on all the web servers'
     script: /tmp/install_script.sh
+    
