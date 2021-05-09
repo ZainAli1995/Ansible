@@ -1,0 +1,10 @@
+-
+ name: "Create a new user on the system"
+ hosts: linux
+ tasks:
+  - 
+   name: 'Create a new user called web_user'
+   user:
+      name: web_user
+      uid: 1040
+
