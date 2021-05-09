@@ -2,7 +2,7 @@
  name: "Update the name server entry in the /tmp/resolv.tmp file"
  hosts: linux
  vars:
-   nameserver_ip: 10.1.250.10
+   nameserver_ip: 127.0.0.1
  tasks:
    -
      name: "Update nameserver entry in the /tmp/resolv.tmp file"
