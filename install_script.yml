@@ -1,0 +1,6 @@
+-
+ name: 'Execute the script on all the web servers'
+ hosts: zainnodea, zainnodeb
+ tasks:
+  - name: 'Execute a script on all the web servers'
+    script: /tmp/install_script.sh
