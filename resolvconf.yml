@@ -1,0 +1,7 @@
+- 
+ name: 'Add name server entry if not already entered'
+ hosts: linux
+ tasks:
+   -
+     shell: 'cat /etc/resolv.conf'
+
