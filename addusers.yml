@@ -3,9 +3,12 @@
  hosts: linux
  tasks:
   - 
-    user: name='{{  item }}' state=present uid=1010
+    user: name='{{ item }}' state=present uid=1010
     loop:
-      - joe 1010
-      - george 1011
-      - ravi 1012
+      - name: joe
+        uid: 1010
+      - name: george
+        uid: 1011
+      - name: ravi
+        uid: 1012
 
