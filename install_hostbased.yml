@@ -4,10 +4,10 @@
  tasks:
    - 
      name: "Install the locate utility on RedHat"
-     yum: "name: mlocate state=latest"
+     yum: "name: mlocate"
      when: ansible_os_family == "RedHat"
    -
      name: "Install the locate utility on Debian"
-     yum: "name: mlocate state=latest"
+     yum: "name: mlocate"
      when: ansible_os_family == "Debian"
 

@@ -1,0 +1,13 @@
+-
+ name: "Check status of a service and email if its down"
+ hosts: linux
+ tasks:
+   - 
+     command: service httpd status
+     register: result
+   -
+     mail:
+       to: muhammadzainalijafarkhan@gmail.com
+       subject: test email
+       body: Httpd service is down
+       when: result.stdout.find('down') != -1
