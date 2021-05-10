@@ -4,4 +4,8 @@
  tasks:
    -
      shell: 'cat /etc/resolv.conf'
+     register: command_output
+
+   -
+     debug: msg="{{ command_output.stdout }}"
 
