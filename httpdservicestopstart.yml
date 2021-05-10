@@ -1,0 +1,16 @@
+-
+ name: "Stop the httpd service on both nodes"
+ hosts: linux
+ tasks:
+   -
+     name: "Stop the httpd service on both nodes"
+     service: "name=httpd state=stopped"
+
+-
+ name: "Start the httpd service only on zainnodea"
+ hosts: linux
+ tasks:
+   -
+     service: "name=httpd state=started"
+     when: ansible_host=="54.167.21.255"
+
