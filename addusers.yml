@@ -1,0 +1,11 @@
+-
+ name: "Add multiple users on the system"
+ hosts: linux
+ tasks:
+  - 
+    user: name='{{  item }}' state=present uid=1010
+    loop:
+      - joe 1010
+      - george 1011
+      - ravi 1012
+
