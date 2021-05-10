@@ -1,0 +1,18 @@
+-
+ name: "Update the name server entry into /tmp/resolv.tmp"
+ hosts: linux
+ vars:
+   nameserver_ip: localhost
+ tasks:
+   -
+     name: "Update name server entry into /tmp/resolv.tmp"
+     lineinfile:
+       path: /etc/resolv.conf
+       line: 'nameserver {{ nameserver_ip }}'
+   -
+     name: "Disable the http port"
+     firewalld:
+       port: 80
+       permanent: true
+       state: disabled
+
