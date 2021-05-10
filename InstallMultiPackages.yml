@@ -3,9 +3,8 @@
  hosts: linux
  tasks:
    -
-    yum: name = '{{ item }}' state=present
+    yum: 'name={{ item }} state=latest'
     with_items:
-      - sysstat
       - nmap
   
-  
+
